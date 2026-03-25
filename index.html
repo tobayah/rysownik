@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rysownik</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">Rysownik</div>
+      <div class="group" id="tools">
+        <button data-tool="select" class="active">Select</button>
+        <button data-tool="rectangle">Rectangle</button>
+        <button data-tool="ellipse">Ellipse</button>
+        <button data-tool="diamond">Diamond</button>
+        <button data-tool="line">Line</button>
+        <button data-tool="arrow">Arrow</button>
+        <button data-tool="freedraw">Draw</button>
+        <button data-tool="text">Text</button>
+      </div>
+      <div class="group">
+        <label>Stroke <input id="strokeColor" type="color" value="#1f2937" /></label>
+        <label>Fill <input id="fillColor" type="color" value="#f8fafc" /></label>
+        <label>Width
+          <input id="strokeWidth" type="range" min="1" max="8" value="2" />
+        </label>
+      </div>
+      <div class="group">
+        <button id="duplicateBtn">Duplicate</button>
+        <button id="deleteBtn">Delete</button>
+        <button id="undoBtn">Undo</button>
+        <button id="redoBtn">Redo</button>
+        <button id="clearBtn">Clear</button>
+      </div>
+    </header>
+
+    <main>
+      <canvas id="canvas"></canvas>
+      <div class="hint">
+        Mouse wheel to zoom • Middle-click / Space+drag to pan • Ctrl/Cmd+C then Ctrl/Cmd+V to duplicate
+      </div>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
